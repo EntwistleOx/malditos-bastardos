@@ -31,13 +31,35 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <!-- <nav id="nav"></nav> -->
+    <nav id="nav">
+      <ul class="menu"> 
+        <li class="logo">
+          <a href="#">Malditos Bastardos</a>
+        </li>
+        <li class="item">
+          <a href="#showcase">Home</a>
+        </li>
+        <li class="item">
+          <a href="#about">Sobre Mi</a>
+        </li>
+        <li class="item">
+          <a href="#services">Servicios</a>
+        </li>
+        <li class="item">
+          <a href="#contact">Contacto</a>
+        </li>
+        <li class="toggle">
+          <a href="#"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul> 
+    </nav>
     <header id="showcase">
       <div class="showcase-container">
          <h1>BIENVENIDOS A BARBERIA <span>Malditos Bastardos</span></h1> 
         <a href="#" class="btn">Leer mas...</a> 
       </div>
     </header>
+
     <section id="about">
       <div class="about-img"></div>
       <div class="about-content">
@@ -58,6 +80,7 @@
         </p>
       </div>
     </section>
+
     <section id="services">
       <div class="container">
         <h2 class="pretitle pretitle-light">Servicios</h2>
@@ -66,17 +89,14 @@
             <i class="flaticon-scissors"></i>
             <p>Corte .... $600</p>
           </div>
-
           <div class="item">
             <i class="flaticon-razor"></i>
             <p>Corte + Barba .... $800</p>
           </div>
-
           <div class="item">
             <i class="flaticon-cream"></i>
             <p>Cera .... $500</p>
           </div>
-
           <div class="item">
             <i class="flaticon-liquid-soap"></i>
             <p>Gel .... $250</p>
@@ -84,6 +104,7 @@
         </div>
       </div>
     </section>
+
     <section id="contact">
       <div class="contact-map">
         <iframe
@@ -125,6 +146,7 @@
         </div>
       </div>
     </section>
+    
     <footer id="footer">
       <h2 class="pretitle pretitle-light">Sigueme</h2>
       <a
@@ -137,5 +159,38 @@
         Copyright 2021 <span>Malditos Bastardos</span>. Destructured by JDev.
       </p>
     </footer>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+    <script>
+      $(function() { 
+        
+      });
+
+      $(".toggle").on("click", function() { 
+        if ($(".item").hasClass("active")) { 
+          $(".item").removeClass("active"); 
+          $(this).find("a").html("<i class='fas fa-bars'></i>"); 
+        } else { 
+          $(".item").addClass("active"); 
+          $(this).find("a").html("<i class='fas fa-times'></i>"); 
+        }
+      });
+
+      $('a').click(function (event) {
+        if (this.hash !== '') {
+          event.preventDefault();
+          var gato = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(gato).offset().top,
+          },600, function () {
+            window.location.hash = gato;
+          },);
+        }
+      });
+    </script>
   </body>
 </html>
