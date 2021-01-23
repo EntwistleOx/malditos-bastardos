@@ -6,6 +6,8 @@
     <title>Malditos Bastardos Barberia</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
       rel="stylesheet"
@@ -15,13 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=BenchNine:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./assets/113525-hairdressing/font/flaticon.css"
-    />
 
-    <!--Font Awesome-->
+    <!-- Awesome -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -29,6 +26,14 @@
       crossorigin="anonymous"
     />
 
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/113525-hairdressing/font/flaticon.css"
+    />
+
+    <!-- Css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
@@ -37,23 +42,24 @@
         <li class="logo">
           <a href="#">Malditos Bastardos</a>
         </li>
-        <li class="item">
+        <li class="nav-item">
           <a href="#showcase">Home</a>
         </li>
-        <li class="item">
+        <li class="nav-item">
           <a href="#about">Sobre Mi</a>
         </li>
-        <li class="item">
+        <li class="nav-item">
           <a href="#services">Servicios</a>
         </li>
-        <li class="item">
+        <li class="nav-item">
           <a href="#contact">Contacto</a>
         </li>
         <li class="toggle">
-          <a href="#"><i class="fas fa-bars"></i></a>
+          <a ><i class="fas fa-bars"></i></a>
         </li>
       </ul> 
     </nav>
+    
     <header id="showcase">
       <div class="showcase-container">
          <h1>BIENVENIDOS A BARBERIA <span>Malditos Bastardos</span></h1> 
@@ -108,18 +114,14 @@
 
     <section id="contact">
       <div class="contact-map">
-        <iframe
-          class="frame"
-          title="maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.851325182998!2d-70.7826047848013!3d-33.427120280780535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c226e8d37f27%3A0xb57afc037e15ac2d!2sAv.+Am%C3%A9rico+Vespucio+1309%2C+Pudahuel%2C+Regi%C3%B3n+Metropolitana!5e0!3m2!1sen!2scl!4v1552147624557"
-        ></iframe>
+        <iframe class="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1055385387476!2d-58.56385128477032!3d-34.601492680460076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb825b5c88bd3%3A0x9e20fb0a7bfb5ee!2sAv.%20Libertador%20Gral.%20San%20Mart%C3%ADn%202118%2C%20B1678GPX%20Caseros%2C%20Provincia%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses!2scl!4v1611434241728!5m2!1ses!2scl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
       <div class="contact-content">
         <div class="info">
+          <h3 class="pretitle pretitle-dark">Direccion</h3>
+          <p>Avenida San Martin #2118, Caseros</p>
           <h3 class="pretitle pretitle-dark">Fono</h3>
-          <p>+56 9 4444 5555</p>
-          <h3 class="pretitle pretitle-dark">Email</h3>
-          <p>pancho@email.com</p>
+          <p>+54 9 11 2454 1982</p>
         </div>
         <div class="form">
           <h3 class="pretitle pretitle-dark">Contacto</h3>
@@ -157,8 +159,11 @@
         <i class="fab fa-instagram fa-3x"></i>
       </a>
       <p>
-        Copyright 2021 <span>Malditos Bastardos</span>. Destructured by Juan Díaz.
+        Copyright 2021 <span>Malditos Bastardos</span>.
       </p>
+      <p>
+        Destructured by Juan Díaz.
+      </p>    
     </footer>
 
     <!-- JQuery -->
@@ -171,11 +176,11 @@
       });
 
       $(".toggle").on("click", function() { 
-        if ($(".item").hasClass("active")) { 
-          $(".item").removeClass("active"); 
+        if ($(".nav-item").hasClass("active")) { 
+          $(".nav-item").removeClass("active"); 
           $(this).find("a").html("<i class='fas fa-bars'></i>"); 
         } else { 
-          $(".item").addClass("active"); 
+          $(".nav-item").addClass("active"); 
           $(this).find("a").html("<i class='fas fa-times'></i>"); 
         }
       });
