@@ -213,12 +213,12 @@ nav .menu li {
 }
 
 #about .about-img {
-  background: url('../img/120136386_416782269310776_4174824009855321257_n.jpg')
+  background: url('../img/fran1.jpeg')
     no-repeat;
-  background-position: 60%;
+  background-position: center;
   background-size: cover;
   height: 100vh;
-  filter: sepia(15%);
+  filter: grayscale(90%);
 }
 
 #about .about-content {
